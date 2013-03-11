@@ -1,8 +1,6 @@
 package entities;
 
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.Input;
+import org.newdawn.slick.*;
 
 public class Player {
 	private final Image image;
@@ -24,22 +22,22 @@ public class Player {
 		
 	}
 
-	public void update(gamecontainer) {
+	public void update(GameContainer gamecontainer) {
 		Input input = gamecontainer.getInput();
-		if (input.isKeyDown(Input.KEY_D)) {
+		if (input.isKeyDown(Input.KEY_D)||input.isKeyDown(Input.KEY_RIGHT)) {
 			x += 0.5f;
 		}
 		
-		if (input.isKeyDown(Input.KEY_A)) {
+		if (input.isKeyDown(Input.KEY_A)||input.isKeyDown(Input.KEY_LEFT)) {
 			x -= 0.5f;
 		}
 		
-		if (input.isKeyDown(Input.KEY_W)) {
-			y += 0.2f;
+		if (input.isKeyDown(Input.KEY_W)||input.isKeyDown(Input.KEY_UP)) {
+			y -= 0.5f;
 		}
 		
-		if (input.isKeyDown(Input.KEY_S)) {
-			y -= 0.2f;
+		if (input.isKeyDown(Input.KEY_S)||input.isKeyDown(Input.KEY_DOWN)) {
+			y += 0.5f;
 		}
 		
 	}

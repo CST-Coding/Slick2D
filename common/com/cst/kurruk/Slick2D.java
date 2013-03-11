@@ -1,6 +1,7 @@
 package com.cst.kurruk;
 
 import org.newdawn.slick.*;
+
 import entities.Player;
 
 public class Slick2D extends BasicGame {
@@ -19,7 +20,7 @@ public class Slick2D extends BasicGame {
 	
 	@Override
 	public void update(GameContainer gamecontainer, int i) throws SlickException {
-		player.update();
+		player.update(gamecontainer);
 	}
 	
 	@Override
@@ -28,13 +29,19 @@ public class Slick2D extends BasicGame {
 		player.render();
 	}
 	
+	public void StateBasedGame(GameContainer gamecontainer) throws SlickException {
+		
+		
+	}
+	
 	public static void main(String[] args) throws SlickException {
 		AppGameContainer app = new AppGameContainer(new Slick2D());
 		
-		app.setMinimumLogicUpdateInterval(5);
-		app.setMaximumLogicUpdateInterval(5);
+		app.setMinimumLogicUpdateInterval(1);
+		app.setMaximumLogicUpdateInterval(1);
 		app.setDisplayMode(1280, 720, false);
-		app.setShowFPS(false);
+		app.setShowFPS(true);
+		app.setTargetFrameRate(60);
 		app.start();
 	}
 	
