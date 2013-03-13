@@ -1,7 +1,6 @@
 package com.cst.kurruk;
 
 import org.newdawn.slick.*;
-
 import entities.Player;
 
 public class Slick2D extends BasicGame {
@@ -45,5 +44,4 @@ public class Slick2D extends BasicGame {
 		app.start();
 	}
 	
-
 }
